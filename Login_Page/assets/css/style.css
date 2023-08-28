@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400&display=swap%27%29%3B');
+
+:root {
+    --color-light-50: #f8fafc;
+    --color-dark-50: #626267;
+    --color-dark-80: #242323;
+    --color-dark-100: #181618;
+    --color-dark-900: #000;
+    --color-red-100: #FF0000;
+
+
+    --color-gradient: linear-gradient(65deg, var(--color-dark-80), var(--color-dark-100), var(--color-dark-900));
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container_marvel {
+
+    background: var(--color-dark-900);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#marvel_logo {
+    margin-top: 130px;
+    background-size: 50px;
+    background: var(--color-dark-900);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+}
+
+#login_form {
+    background-color: var(--color-light-50);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 40px;
+    border-radius: 8px;
+    gap: 30px;
+    box-shadow: 5px, 5px, 8px rgb(255, 255, 255);
+    height: fit-content;
+}
+
+#form_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#form_header h1 {
+    font-size: 38px;
+    position: relative;
+}
+
+#form_header h1::before {
+    position: absolute;
+    content: '';
+    width: 40%;
+    background-color: var(--color-red-100);
+    height: 3px;
+    bottom: 10px;
+    border-radius: 5px;
+}
+
+#mode_icon {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#social_media {
+    display: flex;
+    justify-content: space-around;
+}
+
+#social_media img {
+    width: 35px;
+}
+
+#social_media img:hover {
+    transform: scale(1.2);
+    transition: 1.0s;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.input-box label {
+    font-size: 14px;
+    color: var(--color-dark-50);
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px;
+    cursor: text;
+    border-bottom: 1px solid var(--color-dark-50);
+}
+
+.input-field i {
+    font-size: 18px;
+    color: var(--color-dark-900);
+}
+
+.input-field input {
+    border: none;
+    background-color: transparent;
+    width: 260px;
+    font-size: 18px;
+    padding: 0px 5px;
+}
+
+.input-field input:focus {
+    outline: none;
+}
+
+#forgot_password a {
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--color-dark-50);
+}
+
+#forgot_password a:hover {
+    color: var(--color-dark-10);
+    transition: 1s;
+}
+
+#login_button {
+    border: none;
+    background: var(--color-gradient);
+    color: var(--color-light-50);
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#login_button:hover {
+    transform: scale(1.05);
+    background: var(--color-red-100);
+}
+
+#copyright {
+    text-decoration: none;
+    border: none;
+    padding: 7px;
+    font-size: 9px;
+    border-radius: 3px;
+    display: flex;
+    text-align: center;
+
+}
+
+.dark #login_form {
+    color: var(--color-light-50);
+    background-color: var(--color-dark-100);
+}
+
+.dark #login_form .input-field input,
+.dark #login_form .input-field i {
+    color: var(--color-light-50);
+}
+
+/*Melhorias no Mobile*/
+
+@media screen and (max-width: 768px) {
+    .social_media {
+        visibility: hidden;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .social_media {
+        background: black;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .login_form {
+        background: black;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .login_form {
+        background: black;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .marvel_logo {
+        background: black;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .marvel_logo {
+        background: black;
+    }
+}
+
+.logo-image {
+    width: 250px;
+    overflow: visible;
+}
+
+.main-container {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+
+    grid-template-areas:
+        "header"
+        "main";
+
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url("../imgs/marvel_fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
